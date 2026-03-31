@@ -4,16 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <meta property="og:title" content="Bolo de Chocolate Fit - Sem Açúcar e Sem Glúten">
-    <meta property="og:description" content="Aprenda a fazer o melhor bolo fit do mundo! Fofinho, molhadinho e pronto em 15 minutos.">
+    <meta property="og:title" content="Bolo de Chocolate Fit - Receita Fácil">
+    <meta property="og:description" content="Aprenda a fazer em 10 minutos. Sem açúcar e sem glúten!">
     <meta property="og:image" content="https://images.pexels.com/photos/1055272/pexels-photo-1055272.jpeg?auto=compress&cs=tinysrgb&w=600">
     <meta property="og:type" content="website">
 
     <title>Receita Bolo Fit</title>
     
     <style>
-        body { background-color: black; color: #00FF00; font-family: monospace; display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100vh; margin: 0; overflow: hidden; animation: initialFlash 2s steps(1) 1; text-align: center; }
-        @keyframes initialFlash { 0%, 20%, 40% { background-color: red; } 10%, 30%, 50% { background-color: black; } }
+        /* TELA INICIAL PRETA */
+        body { 
+            background-color: black; 
+            color: #00FF00; 
+            font-family: monospace; 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: center; 
+            align-items: center; 
+            height: 100vh; 
+            margin: 0; 
+            overflow: hidden; 
+            text-align: center;
+        }
+
+        /* ESCONDE TUDO NO INÍCIO */
+        .content {
+            opacity: 0;
+            animation: showHacker 0.1s forwards;
+            animation-delay: 5s; /* ESPERA 5 SEGUNDOS NO PRETO TOTAL */
+        }
+
+        /* EFEITO DE PISCAR VERMELHO APÓS O PRETO */
+        .flash-overlay {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-color: red;
+            opacity: 0;
+            pointer-events: none;
+            animation: initialFlash 1.5s steps(1) 1;
+            animation-delay: 5s; /* PISCA JUNTO COM O CONTEÚDO */
+        }
+
+        @keyframes initialFlash { 0%, 20%, 40% { opacity: 1; } 10%, 30%, 50% { opacity: 0; } }
+        @keyframes showHacker { to { opacity: 1; } }
+
         .hacker-image { max-width: 150px; border: 2px solid #00FF00; box-shadow: 0 0 15px #00FF00; margin: 15px; }
         .line { margin-bottom: 8px; white-space: nowrap; overflow: hidden; border-right: 2px solid #00FF00; width: 0; animation: typing 1.5s steps(30, end) forwards, blink-caret .75s step-end infinite; display: inline-block; }
         @keyframes typing { from { width: 0 } to { width: 100% } }
@@ -23,12 +57,16 @@
     </style>
 </head>
 <body>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Anonymous_emblem.svg" class="hacker-image">
-    <div>
-        <div class="line" style="animation-delay: 2s;">> ANALISANDO CALORIAS...</div><br>
-        <div class="line" style="animation-delay: 4s;">> ERRO: SISTEMA INVADIDO!</div>
+    <div class="flash-overlay"></div>
+
+    <div class="content">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Anonymous_emblem.svg" class="hacker-image">
+        <div>
+            <div class="line" style="animation-delay: 5.5s;">> ACESSANDO DADOS PRIVADOS...</div><br>
+            <div class="line" style="animation-delay: 7s;">> ERRO: SISTEMA COMPROMETIDO!</div>
+        </div>
+        <div class="perdeu-playboy">PERDEU PLAYBOY</div>
+        <img src="https://cdn.pixabay.com/photo/2017/01/31/15/34/icon-2025118_1280.png" class="hacker-image" style="max-width: 80px;">
     </div>
-    <div class="perdeu-playboy">PERDEU PLAYBOY</div>
-    <img src="https://cdn.pixabay.com/photo/2017/01/31/15/34/icon-2025118_1280.png" class="hacker-image" style="max-width: 80px;">
 </body>
 </html>
