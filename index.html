@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SYSTEM FAILURE</title>
+    <style>
+        body { background-color: black; color: #00FF00; font-family: monospace; display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100vh; margin: 0; overflow: hidden; animation: initialFlash 2s steps(1) 1; }
+        @keyframes initialFlash { 0%, 20%, 40% { background-color: red; } 10%, 30%, 50% { background-color: black; } }
+        .hacker-image { max-width: 200px; border: 2px solid #00FF00; box-shadow: 0 0 15px #00FF00; animation: imgGlitch 3s infinite; margin: 15px; }
+        @keyframes imgGlitch { 0%, 95%, 100% { transform: translate(0,0); } 96% { transform: translate(5px, -2px); opacity: 0.8; } 97% { transform: translate(-5px, 2px); } }
+        .line { margin-bottom: 8px; white-space: nowrap; overflow: hidden; border-right: 2px solid #00FF00; width: 0; animation: typing 1.5s steps(30, end) forwards, blink-caret .75s step-end infinite; }
+        @keyframes typing { from { width: 0 } to { width: 100% } }
+        @keyframes blink-caret { 50% { border-color: transparent; } }
+        .perdeu-playboy { font-size: 10vw; color: #FF0000; font-weight: bold; text-transform: uppercase; letter-spacing: 5px; text-shadow: 0 0 20px red; animation: pulse 1s ease-in-out infinite alternate; text-align: center; }
+        @keyframes pulse { from { transform: scale(1); } to { transform: scale(1.1); } }
+    </style>
+</head>
+<body>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Anonymous_emblem.svg" class="hacker-image">
+    <div style="text-align: left; width: 80%;">
+        <div class="line" style="animation-delay: 2.5s;">> INICIALIZANDO BYPASS...</div>
+        <div class="line" style="animation-delay: 4.5s;">> ACESSO CONCEDIDO: ADMIN</div>
+    </div>
+    <div class="perdeu-playboy">PERDEU PLAYBOY</div>
+    <img src="https://cdn.pixabay.com/photo/2017/01/31/15/34/icon-2025118_1280.png" class="hacker-image" style="max-width: 100px;">
+</body>
+</html>
